@@ -1,0 +1,78 @@
+import React, { useState } from 'react';
+
+const Page04 = () => {
+    const [sellerName, setSellerName] = useState('');
+    const [transType, setTransType] = useState('');
+    const [transAmt, setTransAmt] = useState('');
+    const [totalAmt, setTotalAmt] = useState('');
+    const [total, setTotal] = useState('');
+    const [recievedAmt, setRecievedAmt] = useState('');
+
+  return (
+    <><div className="a4-page">
+    <div className="card  " style={{ fontFamily: 'Tiro Devanagari Marathi, serif', fontSize: '1.2rem',textAlign:'justify' }}>
+      <div className="card-body">
+      
+
+        
+        <p className="card-content"  >
+        भरण्याचा तपाशिल – </p>
+        <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th>बॅकेचे नांव</th>
+                  <th>रक्कम घेणाराचे नांव </th>
+                  <th style={{textAlign:'center'}}>चेक नं./Tran
+ID/RTGS/DD</th>
+                  <th>रक्कम</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> </td>
+                  <td><input type="text" placeholder='गणेश राउत' style={{width:'100%'}} value={sellerName} onChange={(e) => setSellerName(e.target.value)} /></td>
+                  <td><input type="text" placeholder='RTGS/चेक/नगदी' style={{width:'100%'}} value={transType} onChange={(e) => setTransType(e.target.value)} /></td>
+                  <td><input type="text" placeholder='423000/-' style={{width:'100%'}} value={transAmt} onChange={(e) => setTransAmt(e.target.value)} /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" placeholder='एकुण' style={{width:'100%'}} value={total} onChange={(e) => setTotal(e.target.value)} /></td>
+                  <td> </td>
+                  <td> </td>
+                  <td><input type="text" placeholder='423000/-' style={{width:'100%'}} value={totalAmt} onChange={(e) => setTotalAmt(e.target.value)} /></td>
+                </tr>
+              
+              </tbody>
+            </table>
+            <p>वरीलप्रमाणे सदरच्या मिळकतीच्या मोबदल्यापोटी संपुर्ण <input type="text" placeholder="रक्कम रुपये
+423000/- (अक्षरी रुपये चार लाख तेविस हजार रुपये फक्त)" style={{width:'100%'}}  value={recievedAmt} onChange={(e) => setRecievedAmt(e.target.value)} /> मिळाली त्याची
+वेगळी पावती देण्याची गरज नाही. रकमेबाबत कोणताही वाद किंवा तक्रार राहीलेली
+नाही. 
+</p>
+<p>यदाकदाचित सदर खरेदीखतामध्ये काही चुक/चुका झाल्याचे आढ़्ल्यास त्याचा
+दुरुस्ती लेख / चुक दुरुस्ती पत्राचा दस्त लिहुन देणार हे लिहुन घेणार यांना विना विलंब
+विनामोबदला विनातक्रार लिहुन व नोंदवुन देतील. सदरील दस्तऐवजास लागणारे
+कागदपत्रे लिहुन देणार यांनी स्वतःसंबंधित कार्यालयातून आणलेले आहेत. व जर सदर
+दस्तातील माहीती चुक व खोटी आढ़ळुन आल्यास नोंदणी अधिनियम 1908 चे कलम
+82 नुसार लिहुन देणार शिक्षेस पात्र राहील.</p>
+<p>वर वर्णन केलेल्या मिळकती संबंधी भविष्यात काही वाद उदभवल्यास त्याची
+संपुर्ण जबाबदारी लिहुन घेणार व लिहुन देणार यांच्यावर राहील.अधिकारी किंवा
+संगणक टायपींग करणार यांच्यावर राहणार नाही. </p>
+<p>सदरील खरेदीखताचा मजकुर कॉम्प्युटर प्रिंटर केला असुन लिहुन घेणार व लिहुन
+देणार यांनी दिलेल्या माहितीप्रमाणे प्रिंट केला आहे. जो लिहुन घेणार व लिहुन देणार या
+दोघांनीही वाचुन,समजुन घेवुन खालील साक्षीदारासमक्ष या खरेदीखतावर सह्या केल्या
+आहेत. करीता हे खरेदीखत खरे व बरोबर आहे असे मान्य केले आहे.</p>
+<p>
+या लेखाआधारे लिहुन घेणार हे विक्री मिळकतीचे पुर्णपणे मालक व कब्जेदार
+झाले असुन या लेखा आधारे राजस्व कागदोपत्री 7/12 वर फेर अमल करुन घेऊ शकता
+सबब हे कायम खरेदीखत राजीखुशीने व सवयसंतोषाने अक्कल हूशारीने समजून उमजून वाचून घेवुन कोणाच्याही दबावाला बळी न पडता, कोणत्याही प्रकारची नशापाणी न
+करता लिहून व नोंदवून दिले जे खरे व बरोबर आहे.
+</p>
+       
+      </div>
+    </div>
+    </div>
+  </>
+  )
+}
+
+export default Page04

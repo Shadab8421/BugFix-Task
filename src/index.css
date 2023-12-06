@@ -1,0 +1,14 @@
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&family=Playfair+Display&family=Roboto:wght@100&family=Tiro+Devanagari+Marathi&family=Young+Serif&display=swap');
+ .a4-page {
+     width: 21cm;
+     height: 30.45cm;
+     margin: 20px auto 20px;
+     /* Updated margin to center the page */
+     border: 2px solid #000;
+     border-radius: 0;
+     box-shadow: 0 0 0 5px #606060;
+ }
+ 
+ input {
+     border: none;
+ }
