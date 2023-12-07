@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Page04 = () => {
+const Page04 = ({formData}) => {
     const [sellerName, setSellerName] = useState('');
     const [transType, setTransType] = useState('');
     const [transAmt, setTransAmt] = useState('');
@@ -9,42 +9,42 @@ const Page04 = () => {
     const [recievedAmt, setRecievedAmt] = useState('');
 
   return (
-    <><div className="a4-page">
-    <div className="card  " style={{ fontFamily: 'Tiro Devanagari Marathi, serif', fontSize: '1.2rem',textAlign:'justify' }}>
-      <div className="card-body">
+    <> 
+    <div className="card  "   style={{width: "21cm",
+     height: "29.7cm", margin: "20px auto 20px"}}>
+      <div className="card-body" style={{ fontFamily: 'Tiro Devanagari Marathi, serif', fontSize: '1.2rem',textAlign:'justify' }}>
       
 
         
         <p className="card-content"  >
         भरण्याचा तपाशिल – </p>
         <table className="table table-bordered">
-              <thead>
-                <tr>
+              <thead style={{textAlign:'center'}}>
+                <tr >
                   <th>बॅकेचे नांव</th>
                   <th>रक्कम घेणाराचे नांव </th>
-                  <th style={{textAlign:'center'}}>चेक नं./Tran
+                  <th >चेक नं./Tran
 ID/RTGS/DD</th>
                   <th>रक्कम</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody style={{textAlign:'center'}}>
                 <tr>
                   <td> </td>
-                  <td><input type="text" placeholder='गणेश राउत' style={{width:'100%'}} value={sellerName} onChange={(e) => setSellerName(e.target.value)} /></td>
-                  <td><input type="text" placeholder='RTGS/चेक/नगदी' style={{width:'100%'}} value={transType} onChange={(e) => setTransType(e.target.value)} /></td>
-                  <td><input type="text" placeholder='423000/-' style={{width:'100%'}} value={transAmt} onChange={(e) => setTransAmt(e.target.value)} /></td>
+                  <td>{formData.sellerName}</td>
+                  <td>{formData.transType}</td>
+                  <td>{formData.transAmt}</td>
                 </tr>
                 <tr>
-                  <td><input type="text" placeholder='एकुण' style={{width:'100%'}} value={total} onChange={(e) => setTotal(e.target.value)} /></td>
+                  <td>{formData.total}</td>
                   <td> </td>
                   <td> </td>
-                  <td><input type="text" placeholder='423000/-' style={{width:'100%'}} value={totalAmt} onChange={(e) => setTotalAmt(e.target.value)} /></td>
+                  <td>{formData.totalAmt}</td>
                 </tr>
               
               </tbody>
             </table>
-            <p>वरीलप्रमाणे सदरच्या मिळकतीच्या मोबदल्यापोटी संपुर्ण <input type="text" placeholder="रक्कम रुपये
-423000/- (अक्षरी रुपये चार लाख तेविस हजार रुपये फक्त)" style={{width:'100%'}}  value={recievedAmt} onChange={(e) => setRecievedAmt(e.target.value)} /> मिळाली त्याची
+            <p>वरीलप्रमाणे सदरच्या मिळकतीच्या मोबदल्यापोटी संपुर्ण {formData.recievedAmt} मिळाली त्याची
 वेगळी पावती देण्याची गरज नाही. रकमेबाबत कोणताही वाद किंवा तक्रार राहीलेली
 नाही. 
 </p>
@@ -70,7 +70,7 @@ ID/RTGS/DD</th>
        
       </div>
     </div>
-    </div>
+     
   </>
   )
 }

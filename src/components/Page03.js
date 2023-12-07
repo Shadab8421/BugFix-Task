@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Page03 = () => {
-    const [buyerPayingAmt, setBuyerPayingAmt] = useState('');
+const Page03 = ({formData}) => {
+    
   return (
-    <><div className="a4-page">
-    <div className="card mb-3" style={{ }}>
+    <> 
+    <div className="card mb-3"  style={{width: "21cm",
+     height: "29.7cm", margin: "20px auto 20px"}}>
       <div className="card-body">
       
 
@@ -35,14 +36,13 @@ const Page03 = () => {
 विनामोबदला देवुन लिहुन घेणार यांचे नावावर करुन देतील. त्याकामी तक्रार वा हरकत
 करणार नाही. </p>
         <p className="card-content" style={{ fontFamily: 'Tiro Devanagari Marathi, serif', fontSize: '1.2rem',textAlign:'justify' }}>
-        वरील वर्णनाची मिळकत लिहुन देणार यांनी <input type="text" placeholder="रक्कम रुपये 423000/- (अक्षरी
-रुपये चार लाख तेविस हजार रुपये फक्त)" style={{width:'100%'}}  value={buyerPayingAmt} onChange={(e) => setBuyerPayingAmt(e.target.value)} /> रुपयांमध्ये मालकी व ताब्याच्या हक्कासह
+        वरील वर्णनाची मिळकत लिहुन देणार यांनी {formData.buyerPayingAmt} रुपयांमध्ये मालकी व ताब्याच्या हक्कासह
 विक्री करुन मालकी आधारे मिळकत तदंगभूत वस्तुसहीत कायमची लिहुन घेणार
 यांच्या ताब्यात दिली आहे. रक्कमेचा भरणा खालील दिलेल्या तपाशिल प्रमाणे लिहुन
 देणार यांना मिळाला आहे. </p>
       </div>
     </div>
-    </div>
+   
   </>
   )
 }

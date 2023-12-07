@@ -1,29 +1,18 @@
-import React, { useState } from 'react';
+import React  from 'react';
 
-const Page02 = () => {
-  const [sellerDeclaration, setSellerDeclaration] = useState('');
-  const [landEast, setLandEast] = useState('');
-  const [landWest, setLandWest] = useState('');
-  const [landNorth, setLandNorth] = useState('');
-  const [landSouth, setLandSouth] = useState('');
+const Page02 = ({formData}) => {
+
 
   return (
-    <><div className="a4-page">
-      <div className="card mb-3"  >
+    <> 
+      <div className="card" style={{width: "21cm",
+     height: "29.7cm", margin: "20px auto 20px"}}  >
         <div className="card-body">
           <div>
           <p className="card-content" style={{ fontFamily: 'Tiro Devanagari Marathi, serif', fontSize: '1.2rem',textAlign:'justify' }}>
           रजिस्ट्रेशन तुकडी व जिल्हा परीषद जालना पोट तुकडी व पंचायत सजमती परतुर
           तालुका, मा. दुय्यम निबंधक परतुर,तालुका पंचायत समिती परतुर पैकी ग्रामपंचायत
-          हद्दींतील
-        
-          <textarea
-  placeholder='मौजे- फिरोजाबाद ता.परतुर,जि.जालना येथील गट नं. 8 चे एकुण क्षेत्रफळ 3 हे 14 आर आकार 16 रु 14 पैसे पोट खराब 01 आर या पैकी माझ्या मालकी,कब्जाचे व हिस्याचे क्षेत्रफळ 0 हे 35 आर संपुर्ण हंगामी बागायत शेत जमीन मी तुम्हास माझ्या संपुर्ण मालकीहक्कासह कायमस्वरुपी विक्री केली आहे.'
-  value={sellerDeclaration}
-  onChange={(e) => setSellerDeclaration(e.target.value)}
-  style={{ width: '100%', height: '150px', display: 'inline', textAlign: 'justify', marginTop:'10px',border:'none'}}
-/>
-
+          हद्दींतील {formData.sellerDeclaration}
         </p>  
           </div>
 <h1 style={{ fontFamily: 'Tiro Devanagari Marathi, serif', fontSize: '1.2rem', textAlign: 'center' }}>ज्याची चतु:सिमा खालील प्रमाणे आह.</h1>
@@ -31,19 +20,19 @@ const Page02 = () => {
             <tbody className=" text-right">
               <tr>
                 <td>पुर्वेस - </td>
-                <td> <input type="text" placeholder="सविता बद्रीनाथ गोंडगे यांची शेत जमीन" style={{width:'150%'}}  value={landEast} onChange={(e) => setLandEast(e.target.value)} /></td>
+                <td> {formData.landEast}</td>
               </tr>
               <tr>
                 <td>पश्चिमेस - </td>
-                <td> <input type="text" placeholder="तातेराव विठ्ठ्लराव राउत यांची शेत जमीन" style={{width:'150%'}}  value={landWest} onChange={(e) => setLandWest(e.target.value)} /></td>
+                <td> {formData.landWest}</td>
               </tr>
               <tr>
                 <td>दक्षीणेस - </td>
-                <td> <input type="text" placeholder="तातेराव विठ्ठ्लराव राउत यांची शेत जमीन" style={{width:'150%'}}  value={landSouth} onChange={(e) => setLandSouth(e.target.value)} /></td>
+                <td> {formData.landSouth}</td>
               </tr>
               <tr>
                 <td>उत्तरेस- </td>
-                <td> <input type="text" placeholder="मिना संतोष राउत यांनी आज रोजी खरेदी केलेली शेत जमीन" style={{width:'150%'}}  value={landNorth} onChange={(e) => setLandNorth(e.target.value)} /></td>
+                <td> {formData.landNorth}</td>
               </tr>
               
             </tbody>
@@ -67,7 +56,7 @@ const Page02 = () => {
 बक्षीस, अदलाबदल, मृत्युपत्र, वारसाहक्क, वाटप कोर्ट, वाद अतिक्रमण, खरेदीखत, </p>
         </div>
       </div>
-      </div>
+      
     </>
   );
 };
